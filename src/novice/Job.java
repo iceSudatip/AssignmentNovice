@@ -25,18 +25,18 @@ public class Job extends Novice  {
         this.attack = attack;
     }
     public void showTank(){
-        //System.out.println(""+ tank);
-        System.out.println("Job of Novice is Swordman");
+        
+        System.out.println("Job : paradin");
         
     }
     
     public void showAttack(){
-        //System.out.println(""+ attack);
-        System.out.println("Job of Novice is Archer or Merchant");
+       
+        System.out.println("Job : sniper");
     }
    public void showJob(){
-       System.out.println("No. 1) : Tank");
-       System.out.println("No. 3) : Attack");
+       System.out.println("1 : Tank");
+       System.out.println("2 : Attack");
    }
     
 }
