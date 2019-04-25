@@ -13,16 +13,20 @@ import java.util.Scanner;
  */
 public class Novice {
 
-    private int atk ;
+    public int atk ;
     private int exp;
     private int hp;
+    private int level;
+    private int guard;
     
     
     //Initial Value Public + Classname
     public Novice(int inputValue){
-        atk = 100;
-        hp = inputValue;
-        exp = 0;
+        this.atk = 100;
+        this.hp = inputValue;
+        this.exp = 0;
+        this.level = 1;
+        this.guard = 50;
 }
      public void startGame(int inputValue) {
         System.out.println("Start");
@@ -53,8 +57,40 @@ public class Novice {
         
     }
        
- 
-     public static void main(String args[]) {
+    public int getatk(){
+		return this.atk;
+	}
+    public int getexp(){
+		return this.exp;
+	}
+    public void addexp(){
+		this.exp++;
+	}
+    public int gethp(){
+		return this.hp;
+	}
+     public int getlevel(){
+		return this.level;
+	}
+     public int getguard(){
+		return this.guard;
+	}
+    public int addatk(int a){
+		return this.atk  = a;
+	}
+    public int addhp(int b){
+                return this.hp+=  b ;
+    }
+    public void Attacked (int c){
+                this.hp -= c;
+    }
+     public void devguard(){
+		 this.guard-=5;
+     }
+     public void setlevel(){
+		this.level++;
+	}
+    /* public static void main(String args[]) {
          ClassBag myBag = new ClassBag();
          Item myItem = new Item();
          
@@ -87,7 +123,7 @@ public class Novice {
          System.out.println("Your custom " + myBag.custom);
          System.out.println("------------------------------");
          myItem.printItem();*/
-         myItem.printItem();
+        /* myItem.printItem();
          myItem.printItem2();
          
         
@@ -106,5 +142,5 @@ public class Novice {
             round++;
         }
         System.out.println("---------END---------");
-    }
+    }*/
 }
